@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic-ext" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/img/logo-title.ico" type="favicon">
+  <link rel="stylesheet" href="swiper.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Travel Agency | Головна</title>
+</head>
+<body>
+  <header class="header">
+    <!--Главная навигация -->
+      <nav class="main-nav">
+        <div class="main-nav-wrapper">
+            <div class="main-logo">
+            <a href="index.html">
+              
+              <b class="logo-text">Travel Agency</b>
+            </a>
+          </div>
+          
+
+          <ul>
+              <li><a href="#">Розробка туру</a></li>
+              <li><a href="#">Готові маршрути</a></li>
+              <li><a href="#">Авіа</a></li>
+              <li><a href="#">Готелі</a></l>
+              <li><a href="#">Гід</a></li>
+              <li><a href="#">Блог</a></li>  
+          </ul>
+
+          <button class="main-nav-toggle main-nav-toggle-close" type="button">
+            Открыть меню
+          </button>
+
+        </div>
+      </nav> 
+  </header>
+  <main class="main">
+  <!-- Топ слайдер -->
+    <section class="top-slider">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+             <h2>Японія чекає тебе! <br> Лише    800 USD </h2>
+             <a href="#">Детальніше</a>
+             <div class="scroll-down">
+              <a href="index.html#about">
+                <div class="scroll-down-icon"></div>
+              </a>
+             </div>
+          </div>
+          <div class="swiper-slide">
+             <h2>Уікенд в Парижі <br>
+              лише  300 USD!
+              </h2>
+             <a href="#">Детальніше</a>
+             <div class="scroll-down">
+              <a href="index.html#about">
+                <div class="scroll-down-icon"></div>
+              </a>
+             </div>
+
+          </div>
+          <div class="swiper-slide">
+             <h2>Гайда в Дубаї!<br>
+                 Лише 1000 USD
+              </h2>
+            <a href="#">Детальніше</a>
+            <div class="scroll-down">
+              <a href="index.html#about">
+                <div class="scroll-down-icon"></div>
+              </a>
+             </div>
+          </div>
+          <div class="swiper-slide">
+             <h2>Уікенд в Венеції <br>
+              Лише  400 USD!
+              </h2>
+            <a href="#">Детальніше</a>
+            <div class="scroll-down">
+              <a href="index.html#about">
+                <div class="scroll-down-icon"></div>
+              </a>
+             </div>
+          </div>
+          <div class="swiper-slide">
+             <h2>Відкривай Ісландію!<br>
+              лише  900 USD
+              </h2>
+            <a href="#">Детальніше</a>
+            <div class="scroll-down">
+              <a href="index.html#about">
+                <div class="scroll-down-icon"></div>
+              </a>
+             </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+      </div>  
+    </section>
+    
+    <!-- Секция 'Сервис' -->
+    <section id="about" class="services">
+      <header class="services-header">
+        <h2>Travel Agency</h2>
+        <b>сервic для планування та організацій незабутніх подорожей </b>
+      </header>
+      <div class="services-list">
+        <article class="service-item sevice-first">
+          <div class="sevice-img"></div>
+        </article>
+        <article class="service-item sevice-second">
+          <div class="sevice-img"></div>
+        </article>
+        <article class="service-item sevice-third">
+           <div class="sevice-img"></div>
+        </article>
+        <article class="service-item sevice-fourth">
+          <div class="sevice-img"></div>
+        </article>
+        <article class="service-item sevice-fifth">
+          <div class="sevice-img"></div>
+        </article>
+      </div>
+
+    </section>
+    
+  
+  </main>
+  <!-- Подключение библиотеку для слайдера-->
+  <script src="assets/js/swiper.min.js"></script>
+
+  <!-- Подключение слайдера-->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+       
+      //autoplay: {
+      //delay: 3000,
+      //disableOnInteraction: false,
+      //},
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  <!--Подключение скрипта для моблильного меню(бургер) -->
+  <script src="assets/js/menu.js"></script>
+  <!--Подключение скрипта для цвета навигации при скроле -->
+  <script src="assets/js/scroll-nav.js"></script>
+  <!--Подключение библотеки для плавного скролинга к якорю -->
+  <script src="assets/js/smooth-scroll.min.js"></script>
+  <!-- Подключение скролинга к якорю -->
+  <script>
+     var scroll = new SmoothScroll('a[href*="#"]', {
+  // Selectors
+  ignore: '[data-scroll-ignore]', // Selector for links to ignore (must be a valid CSS selector)
+  header: '.main-nav', // Selector for fixed headers (must be a valid CSS selector)
+
+  // Speed & Easing
+  speed: 650, // Integer. How fast to complete the scroll in milliseconds
+  offset: 0, // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
+  easing: 'easeInOutCubic', // Easing pattern to use
+  customEasing: function (time) {}, // Function. Custom easing pattern
+
+
+});
+  </script>
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
